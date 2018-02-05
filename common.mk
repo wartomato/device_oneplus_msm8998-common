@@ -91,10 +91,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/common/etc/sysconfig/google_vr_build.xml:system/etc/sysconfig/google_google_vr_build.xml \
     $(LOCAL_PATH)/prebuilt/common/etc/sysconfig/nexus.xml:system/etc/sysconfig/nexus.xml
 
-# Device was launched with N
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=25
-
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
