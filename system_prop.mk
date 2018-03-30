@@ -102,7 +102,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.dpm.feature=11
+    persist.sys.dpmd.tcm=2 \
+    persist.vendor.dpm.feature=11 \
+    persist.vendor.dpm.nsrm=3 \
+    persist.vendor.dpm.tcm=2
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
