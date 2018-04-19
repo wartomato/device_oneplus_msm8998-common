@@ -190,6 +190,9 @@ ro.vendor.sensors.mot_detect=true
 ro.vendor.sensors.dpc=true
 ro.vendor.sensors.multishake=true
 
+# Tethering
+net.tethering.noprovisioning=true
+
 # Timeservice
 persist.timed.enable=true
 
