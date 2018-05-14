@@ -437,4 +437,8 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
+
+    <!-- BurnIn protection. This should be enabled on devices that have OLED displays -->
+    <!-- applies to both navbar and SmartPixels -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>
