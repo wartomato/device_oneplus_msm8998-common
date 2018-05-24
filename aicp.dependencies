@@ -20,11 +20,6 @@
     "branch": "lineage-15.1"
   },
   {
-    "repository": "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "branch": "lineage-15.1"
-  },
-  {
     "repository": "crdroidandroid/android_prebuilts_snapdragon-llvm_toolchains_llvm-Snapdragon-LLVM-for-Android-4.0",
     "target_path": "prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0",
     "branch": "8.1"
