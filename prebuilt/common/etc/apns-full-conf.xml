@@ -6034,7 +6034,7 @@
       mmsport="8008"
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17"
       authtype="1"
-      type="mms,default,supl,ia"
+      type="mms,default,supl,ia,dun"
       protocol="IPV4V6"
   />
 
@@ -9420,7 +9420,7 @@
       mcc="310"
       mnc="260"
       apn="fast.t-mobile.com"
-      type="default,supl,ia"
+      type="default,supl,ia,dun"
       protocol="IPV6"
       roaming_protocol="IP"
       mtu="1440"
