@@ -926,7 +926,7 @@ void IPACM_Lan::event_callback(ipa_cm_event_id event, void *param)
 				}
 			}
 
-			if (ipa_interface_index == ipa_if_num 
+			if (ipa_interface_index == ipa_if_num
 #ifdef FEATURE_L2TP
 				|| is_vlan_event(data->iface_name) ||
 				|| (is_l2tp_event(data->iface_name) && ipa_if_cate == ODU_IF)
@@ -3179,7 +3179,7 @@ int IPACM_Lan::handle_uplink_filter_rule(ipacm_ext_prop *prop, ipa_ip_type iptyp
 
 	flt_index.retain_header_valid = 1;
 	flt_index.retain_header = 0;
-	flt_index.embedded_call_mux_id_valid = 1;	
+	flt_index.embedded_call_mux_id_valid = 1;
 	qmap_id = IPACM_Iface::ipacmcfg->GetQmapId();
 	flt_index.embedded_call_mux_id = qmap_id;
 #ifndef FEATURE_IPA_V3
@@ -3262,7 +3262,8 @@ int IPACM_Lan::handle_uplink_filter_rule(ipacm_ext_prop *prop, ipa_ip_type iptyp
 
 #ifdef FEATURE_IPACM_HAL
 		/* add prefix equation in modem UL rules */
-		if(iptype == IPA_IP_v4 && flt_rule_entry.rule.eq_attrib.num_offset_meq_32 < IPA_IPFLTR_NUM_MEQ_32_EQNS)
+		if(iptype == IPA_IP_v4 && (flt_rule_entry.rule.eq_attrib.num_offset_meq_32 >= 0)
+		        && (flt_rule_entry.rule.eq_attrib.num_offset_meq_32 < IPA_IPFLTR_NUM_MEQ_32_EQNS))
 		{
 			flt_rule_entry.rule.eq_attrib.num_offset_meq_32++;
 			eq_index = flt_rule_entry.rule.eq_attrib.num_offset_meq_32 - 1;
@@ -3296,7 +3297,9 @@ int IPACM_Lan::handle_uplink_filter_rule(ipacm_ext_prop *prop, ipa_ip_type iptyp
 		}
 		else
 		{
-			if (flt_rule_entry.rule.eq_attrib.num_offset_meq_128 < IPA_IPFLTR_NUM_MEQ_128_EQNS)
+			if ((flt_rule_entry.rule.eq_attrib.num_offset_meq_128 >= 0) &&
+				(flt_rule_entry.rule.eq_attrib.num_offset_meq_128
+					< IPA_IPFLTR_NUM_MEQ_128_EQNS))
 			{
 				flt_rule_entry.rule.eq_attrib.num_offset_meq_128++;
 				eq_index = flt_rule_entry.rule.eq_attrib.num_offset_meq_128 - 1;
