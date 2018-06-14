@@ -26,6 +26,10 @@ import android.util.Log;
 
 import org.lineageos.internal.util.FileUtils;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
 public class ProximitySensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
@@ -40,12 +44,14 @@ public class ProximitySensor implements SensorEventListener {
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private Context mContext;
+    private ExecutorService mExecutorService;
 
     public ProximitySensor(Context context) {
         boolean found = false;
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        mExecutorService = Executors.newSingleThreadExecutor();
 
         if (FileUtils.fileExists(CHEESEBURGER_FILE)) {
             FPC_FILE = CHEESEBURGER_FILE;
@@ -61,6 +67,10 @@ public class ProximitySensor implements SensorEventListener {
         if (found) {
             if (DEBUG) Log.d(TAG, "Using proximity state from " + FPC_FILE);
         }
+    }
+
+    private Future<?> submit(Runnable runnable) {
+        return mExecutorService.submit(runnable);
     }
 
     @Override
@@ -83,14 +93,18 @@ public class ProximitySensor implements SensorEventListener {
 
     protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
-        mSensorManager.registerListener(this, mSensor,
-                SensorManager.SENSOR_DELAY_NORMAL);
+        submit(() -> {
+            mSensorManager.registerListener(this, mSensor,
+                    SensorManager.SENSOR_DELAY_NORMAL);
+        });
     }
 
     protected void disable() {
         if (DEBUG) Log.d(TAG, "Disabling");
-        mSensorManager.unregisterListener(this, mSensor);
-        // Ensure FP is left enabled
-        setFPProximityState(/* isNear */ false);
+        submit(() -> {
+            mSensorManager.unregisterListener(this, mSensor);
+            // Ensure FP is left enabled
+            setFPProximityState(/* isNear */ false);
+        });
     }
 }
