@@ -49,6 +49,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_adding_apns_bool" value="true" />
         <boolean name="hide_preferred_network_type_bool" value="false" />
         <boolean name="show_cdma_choices_bool" value="true" />
+        <boolean name="disable_cdma_activation_code_bool" value="true" />
+        <boolean name="show_apn_setting_cdma_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="config_enable_display_14digit_imei" value="false" />
         <!-- Determines whether UI extensions for video calls should be used or not -->
@@ -147,8 +149,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="editable_wfc_mode_bool" value="false" />
-        <int name="carrier_default_wfc_ims_mode_int" value="1" />
-        <int name="wfc_spn_format_idx_int" value="1" />
     </carrier_config>
 
     <carrier_config mcc="262" mnc="02">
@@ -321,10 +321,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     </carrier_config>
 
     <carrier_config mcc="310" mnc="260">
-        <boolean name="carrier_volte_available_bool" value="true" />
-        <boolean name="carrier_wfc_ims_available_bool" value="true" />
-        <boolean name="editable_wfc_mode_bool" value="false" />
-        <boolean name="carrier_vt_available_bool" value="false" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="carrier_rtt_supported" value="true" />
         <boolean name="carrier_rtt_supported_on_vtcalls" value="true"/>
