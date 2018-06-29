@@ -1,0 +1,2 @@
+dontaudit untrusted_app_25 proc:file { read open getattr };
+dontaudit untrusted_app_25 proc_stat:file { read open getattr };
