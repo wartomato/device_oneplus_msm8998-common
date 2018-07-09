@@ -20,10 +20,12 @@ import re
 
 def FullOTA_Assertions(info):
   AddModemAssertion(info)
+  AddFileEncryptionAssertion(info)
   return
 
 def IncrementalOTA_Assertions(info):
   AddModemAssertion(info)
+  AddFileEncryptionAssertion(info)
   return
 
 def AddModemAssertion(info):
@@ -39,4 +41,27 @@ def AddModemAssertion(info):
 abort("Error: This package requires firmware version ' + version_firmware + \
 ' or newer. Please upgrade firmware and retry!"););'
       info.script.AppendExtra(cmd)
+  return
+
+def AddFileEncryptionAssertion(info):
+  info.script.AppendExtra('package_extract_file("install/bin/fbe_check.sh", "/tmp/fbe_check.sh");');
+  info.script.AppendExtra('set_metadata("/tmp/fbe_check.sh", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('if !is_mounted("/data") then');
+  info.script.Mount("/data");
+  info.script.AppendExtra('endif;');
+  info.script.AppendExtra('if run_program("/tmp/fbe_check.sh") != 0 then');
+  info.script.AppendExtra('ui_print("*******************************************");');
+  info.script.AppendExtra('ui_print("*              !!! ERROR !!!              *");');
+  info.script.AppendExtra('ui_print("*                                         *");');
+  info.script.AppendExtra('ui_print("* File-based Encryption (FBE) is required *");');
+  info.script.AppendExtra('ui_print("*                                         *");');
+  info.script.AppendExtra('ui_print("* Backup your data (including internal    *");');
+  info.script.AppendExtra('ui_print("* storage) and format the data partition. *");');
+  info.script.AppendExtra('ui_print("*                                         *");');
+  info.script.AppendExtra('ui_print("* For more Information please visit:      *");');
+  info.script.AppendExtra('ui_print("* https://bit.ly/2L3Qkki                  *");');
+  info.script.AppendExtra('ui_print("*******************************************");');
+  info.script.AppendExtra('abort("Check on FBE failed.");');
+  info.script.AppendExtra('endif;');
+  info.script.Unmount("/data");
   return

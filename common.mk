@@ -381,6 +381,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_oneplus
 
+# Releasetools
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fbe_check.sh:install/bin/fbe_check.sh
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
