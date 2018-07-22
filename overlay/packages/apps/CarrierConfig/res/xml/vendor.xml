@@ -145,12 +145,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     </carrier_config>
 
     <carrier_config mcc="262" mnc="01">
-        <boolean name="carrier_volte_available_bool" value="true" />
-        <boolean name="carrier_volte_override_wfc_provisioning_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
+       <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
-        <boolean name="carrier_wfc_ims_available_bool" value="true" />
-        <boolean name="editable_wfc_mode_bool" value="true" />
-        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+       <boolean name="carrier_wfc_ims_available_bool" value="true" />
+       <boolean name="editable_wfc_mode_bool" value="false" />
+       <int name="wfc_spn_format_idx_int" value="1" />
     </carrier_config>
 
     <carrier_config mcc="262" mnc="02">
