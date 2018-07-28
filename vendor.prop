@@ -142,6 +142,9 @@ mm.enable.qcom_parser=16777215
 ro.nfc.port=I2C
 persist.nfc.smartcard.config=SIM1,eSE1
 
+# OTG support
+persist.sys.oem.otg_support=true
+
 # Perf
 ro.sys.fw.bg_apps_limit=60
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -149,8 +152,6 @@ ro.am.reschedule_service=true
 sched.colocate.enable=1
 sys.games.gt.prof=1
 
-# OTG support
-persist.sys.oem.otg_support=true
 
 # QSEE
 persist.sys.qsee=yes
@@ -234,7 +235,6 @@ net.tethering.noprovisioning=true
 
 # Timeservice
 persist.timed.enable=true
-persist.backup.ntpServer="0.pool.ntp.org"
 
 # USB
 sys.usb.controller=a800000.dwc3
