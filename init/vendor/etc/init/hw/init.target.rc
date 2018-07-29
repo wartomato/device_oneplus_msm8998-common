@@ -296,7 +296,7 @@ service per_proxy /vendor/bin/pm-proxy
 on property:init.svc.per_mgr=running
     start per_proxy
 
-on shutdown
+on property:sys.powerctl=*
     stop per_proxy
 
 service qseecomd /vendor/bin/qseecomd
