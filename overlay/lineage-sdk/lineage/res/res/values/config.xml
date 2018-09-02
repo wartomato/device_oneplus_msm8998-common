@@ -73,7 +73,7 @@
         app, they can be remapped here. The format is
         "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
-        <item>native:standard</item>
+	<item>hal_native_identity:standard</item>
         <item>night_mode:reading</item>
         <item>sharpness8:Grayscale</item>
         <item>srgb:srgb</item>
