@@ -72,4 +72,3 @@ def AddFileEncryptionAssertion(info):
   info.script.AppendExtra('abort("Check on FBE failed.");');
   info.script.AppendExtra('endif;');
   info.script.Unmount("/data");
-  return
