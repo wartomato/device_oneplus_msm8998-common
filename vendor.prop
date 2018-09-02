@@ -209,7 +209,7 @@ persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.is_wps_enabled=true
 persist.radio.videopause.mode=1
 persist.radio.sap_silent_pin=1
-persist.vendor.radio.add_power_save=true
+persist.vendor.radio.add_power_save=1
 persist.rcs.supported=0
 
 # RmNet Data
@@ -244,10 +244,10 @@ sys.usb.rndis.func.name=gsi
 sys.usb.rmnet.func.name=gsi
 
 # VoLTE/VoWifi options
-# persist.dbg.ims_volte_enable=1
-# persist.dbg.volte_avail_ovr=1
-# persist.dbg.vt_avail_ovr=1
-# persist.dbg.wfc_avail_ovr=1
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 
 # Wi-Fi
 wifi.interface=wlan0
