@@ -154,6 +154,7 @@ ro.sys.fw.bg_apps_limit=60
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.am.reschedule_service=true
 sched.colocate.enable=1
+persist.debug.coresight.config=none
 sys.games.gt.prof=1
 
 
@@ -198,7 +199,7 @@ persist.radio.hw_mbn_update=0
 persist.radio.sw_mbn_update=0
 persist.radio.start_ota_daemon=0
 persist.vendor.radio.custom_ecc=1
-persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_con_rprt=0
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.radio.calls.on.ims=1
 persist.vendor.radio.force_on_dc=true
@@ -227,6 +228,9 @@ persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 persist.data.iwlan.enable=true
+
+# Storage
+ro.sys.sdcardfs=true
 
 # Sensors
 ro.vendor.sensors.dev_ori=true
