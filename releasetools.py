@@ -67,8 +67,9 @@ def AddFileEncryptionAssertion(info):
   info.script.AppendExtra('ui_print("* storage) and format the data partition. *");');
   info.script.AppendExtra('ui_print("*                                         *");');
   info.script.AppendExtra('ui_print("* For more Information please visit:      *");');
-  info.script.AppendExtra('ui_print("* https://bit.ly/2L3Qkki                  *");');
+  info.script.AppendExtra('ui_print("* https://bit.ly/2L3Qkki on another device*");');
   info.script.AppendExtra('ui_print("*******************************************");');
   info.script.AppendExtra('abort("Check on FBE failed.");');
   info.script.AppendExtra('endif;');
   info.script.Unmount("/data");
+  return
