@@ -376,10 +376,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_oneplus
 
-# Releasetools
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fbe_check.sh:install/bin/fbe_check.sh
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.usb.rc:root/init.recovery.qcom.usb.rc

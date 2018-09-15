@@ -9,11 +9,11 @@ A: We follow Google and OnePlus on their way to a more secure device and the pro
 
 *Q: But what if I don't want FBE?*
 A: Well, it's set to enforcing. You'll get an "Error 7" in TWRP, when you're trying to flash the new version without FBE enabled.
-   This means that you do **NOT** have the option be to flash a "no_dmverity.zip" or a similar patch before/after the ROM file...
+   This means that you do have the option be to flash a "no_dmverity.zip" for treble or a similar patch before/after the ROM file...
 
 *Q: How to enable FBE? What do I have to do?*
 A: You do not have to do anything on an already encrypted device. From an unencrypted device, please backup all your data (including internal storage!!!) via TWRP and copy it to an external source.
    Afterwards format your data partition **twice**, then just flash the ROM.
 
 *Q: What happens, if I don't follow the instructions, e.g. getting the "Error 7"?*
-A: Running a FBE-enabled ROM on a FBE-disabled phone will cause boot loops. So a check for FBE was implemented that prevents you from flashing "by accident" on an unencrypted device.
+A: Running a FBE-enabled ROM on a FBE-disabled phone might cause boot loops.
