@@ -60,6 +60,10 @@ ro.bluetooth.wipower=false
 persist.bt.a2dp.aac_disable=true
 persist.vendor.bt.enable.splita2dp=false
 
+# Bootloader
+ro.boot.verifiedbootstate=green
+ro.boot.veritymode=enforcing
+
 # Cabl
 ro.qualcomm.cabl=0
 
