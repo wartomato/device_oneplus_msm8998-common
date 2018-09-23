@@ -87,8 +87,9 @@ persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
 # DPM
-# OOS: 9 = enable FD , TCM , disable CT , NSRM
-persist.vendor.dpm.feature=11
+# 0 = disable
+# 9 = enable FD , TCM , disable CT , NSRM
+persist.vendor.dpm.feature=9
 
 # DRM
 drm.service.enabled=true
@@ -112,7 +113,7 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 persist.hwc.enable_vds=1
 debug.sf.latch_unsignaled=1
-vendor.display.enable_default_color_mode=0
+debug.sf.disable_backpressure=1
 
 # IZat OptInApp overlay enable
 persist.vendor.overlay.izat.optin=rro
@@ -199,7 +200,7 @@ persist.radio.hw_mbn_update=0
 persist.radio.sw_mbn_update=0
 persist.radio.start_ota_daemon=0
 persist.vendor.radio.custom_ecc=1
-persist.vendor.radio.data_con_rprt=0
+persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.radio.calls.on.ims=1
 persist.vendor.radio.force_on_dc=true
@@ -215,6 +216,8 @@ persist.radio.is_wps_enabled=true
 persist.radio.videopause.mode=1
 persist.radio.sap_silent_pin=1
 persist.vendor.radio.add_power_save=1
+
+# RCS service
 persist.rcs.supported=0
 
 # RmNet Data
