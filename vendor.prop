@@ -20,7 +20,7 @@ ro.dirac.ignore_error=1
 # Audio new
 ro.vendor.audio.sdk.fluencetype=fluencepro
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicerec=true
+persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.hac.enable=false
 vendor.audio.tunnel.encode=false
@@ -106,6 +106,7 @@ persist.demo.hdmirotationlock=false
 ro.opengles.version=196610
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=0
+sdm.debug.rotator_downscale=1
 persist.sys.force_sw_gles=0
 # property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
@@ -200,13 +201,14 @@ persist.radio.hw_mbn_update=0
 persist.radio.sw_mbn_update=0
 persist.radio.start_ota_daemon=0
 persist.vendor.radio.custom_ecc=1
-persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_con_rprt=true
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.radio.calls.on.ims=1
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.ignore_dom_time=10
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
+persist.vendor.ims.dropset_feature=0
 
 persist.radio.RATE_ADAPT_ENABLE=1
 persist.radio.ROTATION_ENABLE=1
@@ -216,9 +218,10 @@ persist.radio.is_wps_enabled=true
 persist.radio.videopause.mode=1
 persist.radio.sap_silent_pin=1
 persist.vendor.radio.add_power_save=1
+persist.vendor.qti.telephony.vt_cam_interface=1
 
 # RCS service
-persist.rcs.supported=0
+persist.rcs.supported=1
 
 # RmNet Data
 persist.rmnet.data.enable=true
