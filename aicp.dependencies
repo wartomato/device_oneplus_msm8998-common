@@ -1,7 +1,7 @@
 [
   {
-    "repository":  "AICP/device_oppo_common",
-    "target_path": "device/oppo/common",
+    "repository":  "wartomato/device_oneplus_common",
+    "target_path": "device/oneplus/common",
     "branch":      "p9.0"
   },
   {
@@ -42,11 +42,6 @@
  {
    "repository":  "LineageOS/android_vendor_nxp_opensource_hidlimpl",
    "target_path": "vendor/nxp/opensource/hidlimpl",
-   "branch":      "lineage-16.0"
- },
- {
-   "repository":  "LineageOS/android_packages_resources_devicesettings",
-   "target_path": "packages/resources/devicesettings",
    "branch":      "lineage-16.0"
  }
 ]
