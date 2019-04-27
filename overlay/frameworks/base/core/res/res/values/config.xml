@@ -481,12 +481,6 @@
          provisioning, availability etc -->
     <bool name="config_carrier_wfc_ims_available">true</bool>
 
-    <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
-
-    <!--  Whether Multiuser UI should be shown -->
-    <bool name="config_enableMultiUserUI">true</bool>
-
     <!-- Config determines whether to update phone object when voice registration
     state changes. Voice radio tech change will always trigger an update of
     phone object irrespective of this config -->
@@ -663,4 +657,14 @@
 
     <!-- Set AOD off by default -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- Audio panel view placement. Is left side enabled -->
+    <bool name="config_audioPanelOnLeftSide">true</bool>
+
+    <!-- Check proximity sensor on wake -->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
+
+    <!-- Statusbar Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
 </resources>
